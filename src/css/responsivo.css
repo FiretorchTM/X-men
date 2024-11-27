@@ -1,0 +1,40 @@
+@media (max-width: 1120px){/*quando chegar em uma largura maxima de 1120px vai aplicar as regras que estão aqui dentro*/
+	.cabecalho .logo{
+		max-width: 190px;
+	}
+	
+	.selecao-de-personagens{
+		flex-direction: column-reverse;/*para virar coluna e so vai se aplicar quando tiver em 1120 e o reverse pra ficar em cima e nao em baixo*/
+		max-width: 430px;
+		margin: 0 auto;/*margen 0 é 0 de margem e auto distruibui o que sobra da esquerda e da direita para centralizar esta sendo usado invez do justify-center porque o elemente tem uma largura*/
+		
+	}
+	
+	.selecao-de-personagens .personagens{
+		margin-top: 37px;/*colocar distancia entre a descricao do personagem e a seleçao do personagem*/
+	}
+	
+	.selecao-de-personagens .personagens .titulo{
+		font-size: 15px;/*tem que buscar os valores no projeto que receberei de algum designer*/
+	}
+	
+	.selecao-de-personagens .lista-de-personagens{
+		gap:9px;
+	}
+	
+	.selecao-de-personagens .personagem img{/*deixa os personages da selecao de personagem menores */
+		width: 80px;
+	}
+	
+	.personagem-selecionado .personagem-grande{
+		width: 350px;
+		height: 350px;
+	}
+	
+	.personagem-selecionado .descricao-personagem{
+		width: 80%;
+		font-size: 16px;
+		margin: 20px auto;/*espacamento para ficar um espaço para a descricao do personagem*/
+	}
+	
+}/*ESSE DOCUMENTO É USADO PARA FAZER COM QUE O SITE FUNCIONE CORRETAMENTE EM QUALQUER DISPOSITIVO*/

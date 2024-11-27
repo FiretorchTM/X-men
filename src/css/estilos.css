@@ -1,0 +1,183 @@
+body{
+	font-family: "Oxanium", cursive; /*busquei no google e passei para aqui a fonte*/
+	background: #000000;
+	color: #ffffff /*todos os textos vao ser brancos*/
+}
+
+body::before{/*seletor = pseudo elemento nao existe no html so no css*/
+	content: "";
+	background-image: url(../imagens/bg-desktop.jpg); /*o ponto ponto volta uma pasta então volto do estilos.css para a src e depois vou para imagens /o background sera = o caminho da imagem que quero selecionar*/
+	background-repeat: no-repeat;/*não quero que repita*/
+	background-size: cover;/*fica faltando se nao tiver, aqui eu digo para cobrir toda a tela*/
+	background-position: center;/*ficar alinhado no centro*/
+	width: 100%;
+	height:100%;
+	position: absolute;/*absolute cria como se fosse uma camada que ficar por cima de tudo*/
+	z-index:-1;/*o eixo z de profundidade vai para tras*/
+	opacity: 0.2;/*deixo o fundo mais opaco*/
+}
+
+.cabecalho{ /*classes são iniciadas com ponto no css*/
+	display: flex; /*centraliza o elemento*/
+	justify-content: center; /*faz parte classe que esta na classe cabecalho */
+}
+
+.selecao-de-personagens{
+	display: flex;/*centraliza o elemento*/
+	align-items: center;
+	gap: 30px;
+	min-height: calc(100vh - 152px);/*100vh é 100% o - 152px é para descontar a altura do cabeçalho do calculo vh = view port = tela de exibição do navegador. faz um calculo para poder*/
+	justify-content:center;/*centraliza horizontalmente*/
+}	
+
+.selecao-de-personagens .lista-de-personagens{ /*estou estilizando um elemento que esta dentro de uma classe que esta dentro de outra classe é para ser espesifico e nao dar erro*/
+	display: flex;/*centraliza o elemento*/
+	flex-wrap: wrap;/*não tem mais espaço na DIV ele vai para a proxima linha*/
+	gap: 30px; /*espaçamento entre os personagens*/
+	justify-content: center;
+}
+
+.selecao-de-personagens .personagens{
+	display: flex;/*centraliza o elemento*/
+	flex-direction: column; /*elementos ficam em colunas*/
+	align-items: center;
+	max-width: 585px; /*faz com que o limite de largura dessa box seja exatamente onde fica a tempestade ficam 4 personagens em cima e 4 em baixo*/
+	gap:25px;
+}
+.selecao-de-personagens .personagens .titulo{
+	font-size: 20px;/*tamanho da fonte*/
+	letter-spacing: 4px;/*espaçamento das letras*/
+	text-transform: uppercase;/*transforma o texto em maiusculo*/
+	border-bottom: 2px solid #47f4ff;/*sem bottom ela fica uma caixa em volta do texto bordinha azul que fica em baixo do texto*/
+	width: 100%;/*o titulo vai ficar do tamanho da section dos personagems vai buscar a largura maxima que é os 585px*/
+	text-align: center;
+}
+
+.lista-de-personagens .personagem img{
+	width: 100%;
+	height: 100%;
+}
+
+.lista-de-personagens .personagem.selecionado{/*quando um elemento que tem duas classes a gente junta eles e se escreve junto no caso e li class " 1 personagem 2 selecionado la do JS"*/
+	box-shadow: 0px 0px 24px 5px #0271f7;/*sao os parametros, opacidade etc */
+}
+.personagem-selecionado{
+	text-align: center;
+	max-height: 530px;/*altura maxima para nao quebrar o programa caso coloque imagens muito grandes ou pequenas*/
+}
+.personagem-selecionado .personagem-grande{
+	width: 430px; /*para nao quebrar a imagem grande na escala*/
+	height: 430px;
+}
+
+.personagem-selecionado .nome-personagem{
+	border-bottom: 2px solid #47f4ff;
+	letter-spacing: 4px;
+	text-transform: uppercase/*deixa as letras em maiusculo*/
+}
+
+.personagem-selecionado .descricao-personagem{/*é a classe do texto que fica do lado direito*/
+	font-size: 16px;/*tamanho da fonte*/
+	line-height: 22px;/*altura da linha*/
+	text-align: center;/*alinhar o texto no centro*/
+	margin-top: 20px;/*espaçamento entre o nome do personagem e sua linha e a descrição que está na classe "personagem selecionado . nome-personagem */
+	max-width: 430px;
+}
+/*a partir da daqui*/
+.botao-xmen {
+    background-color: #ffcc00; /* Amarelo típico dos X-Men */
+    color: #0000ff; /* Azul vibrante */
+    border: 2px solid #0000ff; /* Borda azul */
+    border-radius: 10px; /* Arredondamento leve */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-family: 'Oxanium', cursive; /* Fonte do projeto */
+    padding: 5px 5px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de clique */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    transition: transform 0.2s, background-color 0.3s; /* Animação suave */
+    width: 90px; /* Defina o tamanho fixo do botão */
+    height: 45px; /* Defina o tamanho fixo do botão */
+    text-align: center; /* Alinha o conteúdo dentro do botão */
+	 transition: opacity 0.5s ease; /* Transição suave de opacidade */
+}
+
+.botao-xmen img {
+    width: 100%; /* Aumenta a imagem para 100% da largura do botão */
+    height: 100%; /* Mantém a proporção se fosse auto */
+    display: block; /* Remove qualquer margem inferior */
+    margin: 0 auto; /* Centraliza a imagem no botão */
+	border-radius: 7px; /* Adiciona bordas arredondadas à imagem */
+}
+
+.botao-xmen:hover {
+    background-color: #0000ff; /* Muda para azul no hover */
+    color: #ffcc00; /* Texto amarelo no hover */
+    transform: scale(1.1); /* Aumenta levemente */
+}
+
+.botao-xmen:active {
+    transform: scale(1); /* Retorna ao normal quando clicado */
+}
+
+.botao-volume {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 50px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    background-color: #ffcc00; /75 Cor de fundo amarelo */
+    color: #0000ff; /* Cor do texto azul */
+    border: 2px solid #0000ff; /* Borda azul */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de clique */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    transition: transform 0.2s, background-color 0.3s; /* Animação suave */
+}
+
+.botao-volume:hover {
+    background-color: #0000ff; /* Muda para azul no hover */
+    color: #ffcc00; /* Texto amarelo no hover */
+    transform: scale(1.1); /* Aumenta levemente */
+}
+
+.botao-volume:active {
+    transform: scale(1); /* Retorna ao normal quando clicado */
+}
+
+/* Estilos para o controle de volume */
+#controle-volume {
+    position: fixed; /* Fixa o controle na tela */
+    bottom: 30px; /* Distância do fundo */
+    right: 20px; /* Distância da borda direita */
+    width: 108px; /* Largura do controle */
+    -webkit-appearance: none; /* Remove a aparência padrão no Safari */
+    height: 5px; /* Altura do slider */
+    background: #ffcc00; /* Cor de fundo do slider */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+}
+
+/* Estilo para o controle quando é deslizado */
+#controle-volume::-webkit-slider-thumb { /*usado para poder modificar o slider*/
+    -webkit-appearance: none; /* Remove a aparência padrão do thumb */
+    appearance: none;
+    width: 16px; /* Largura do controle */
+    height: 16px; /* Altura do controle */
+    background: #0000ff; /* Cor azul do thumb */
+    border-radius: 50%; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+}
+
+/* Estilo para o thumb do controle no Firefox */
+#controle-volume::-moz-range-thumb {
+    width: 20px; 
+    height: 20px; 
+    background: #0000ff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*
+#noturno{
+ transform: scaleX(-1);
+}*/
+

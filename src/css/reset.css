@@ -1,0 +1,10 @@
+/* esse documento serve para limpar todas as fontes padroes do google*/
+*{
+	margin:0; /*espaçamento externo dos elementos*/
+	padding:0; /*espaçamento interno dos elementos*/
+	box-sizing: boder-box;
+}
+
+ul{
+	list-style: none; /*retira as bolinhas da lista*/
+}

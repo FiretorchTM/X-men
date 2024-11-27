@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projeto X-Men</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet"> <!-- codigo para fonte que busquei no google -->
+
+<link rel="stylesheet" href="./src/css/reset.css"> <!-- ligação dos css com o html -->
+<link rel="stylesheet" href="./src/css/estilos.css">
+<link rel="stylesheet" href="./src/css/responsivo.css">
+
+</head>
+<body>
+	<header class="cabecalho">
+	<img class"logo" src="./src/imagens/logo.svg" alt="Logo dos X-Men">
+	</header>
+	<button id="botao-volume" class="botao-volume">🔊 Volume</button>
+	<!-- Controle de volume -->
+<input type="range" id="controle-volume" min="0" max="1" step="0.01" value="0.5">
+	<main class="selecao-de-personagens">
+		<section class="personagens">
+			<h1 class="titulo"> Selecione um personagem</h1>
+			<button id="botao-iniciar-musica" class="botao-xmen">
+			<img src="./src/imagens/imagem-botao.png" alt="Iniciar musica" class="image-botao">
+			</button>
+
+			<ul class="lista-de-personagens">
+				<li class="personagem selecionado" id="ciclope" data-name="Ciclope" data-description="Ciclope Pode disparar poderosas rajadas oculares,
+			esse poder foi adiquirido apos um grave acidente quando ele era apenas uma criança
+			Dificuldade: Media.">
+					<img src="./src/imagens/card-ciclope.jpg" 
+					alt="Personagem Ciclope"> 
+				</li>
+				<li class="personagem" id="jean-grey" data-name="Jean Grey" data-description="Jean Grey é uma telepata e telecinética de nível Omega, capaz de manipular mentes e objetos com facilidade. Ela também é a hospedeira da entidade Fênix.
+    Dificuldade: Muito Difícil"> <!--posso add mais atributos com o data-->
+					<img src="./src/imagens/card-jean-grey.jpg" 
+					alt="Personagem Jean Grey"> 
+				</li>
+				<li class="personagem" id="lince-negra" data-name="Lince Negra" data-description="Lince Negra tem a habilidade de atravessar objetos sólidos, um poder que a torna quase intangível e extremamente ágil em combate.
+				Dificuldade: Média">
+					<img src="./src/imagens/card-lince-negra.jpg" 
+					alt="personagem Lince Negra"> 
+				</li>
+				<li class="personagem" id="tempestade" data-name="Tempestade" data-description="Tempestade é capaz de controlar o clima, criando tempestades devastadoras e manipulando ventos e raios com maestria.
+    Dificuldade: Difícil">
+					<img src="./src/imagens/card-tempestade.jpg" 
+					alt="personagem Tempestade"> 
+				</li>
+				<li class="personagem" id="vampira" data-name="Vampira"data-description="Vampira absorve os poderes e memórias de outros através do toque, mas isso também a impede de ter contato físico direto por muito tempo.
+   Dificuldade: Média">
+					<img src="./src/imagens/card-vampira.jpg" 
+					alt="personagem Vampira"> 
+				</li>
+				<li class="personagem" id="wolverine" data-name="Wolverine" data-description=" Wolverine possui garras de adamantium, um fator de cura acelerado e sentidos aguçados, tornando-o uma máquina de combate imparável.
+    Dificuldade: Difícil">
+					<img src="./src/imagens/card-wolverine.jpg" 
+					alt="personagem Wolverine"> 
+				</li>
+				<li class="personagem" id="noturno" data-name="Noturno" data-description=" Nocturno é um ágil acrobata com a habilidade de se teletransportar para curtas distâncias, usando a escuridão como vantagem.
+    Dificuldade: Média">
+					<img src="./src/imagens/card-noturno.jpg" 
+					alt="personagem Noturno"> 
+				</li>
+				<li class="personagem" id="magneto" data-name="Magneto" data-description="Magneto controla campos magnéticos, podendo manipular e dobrar metais, além de criar barreiras defensivas quase indestrutíveis.
+    Dificuldade: Muito Difícil">
+					<img src="./src/imagens/card-magneto.jpg" 
+					alt="personagem Magneto"> 
+				</li>
+			</ul>
+		</section> <!-- seleção de personagens	-->
+		
+		
+		<section class="personagem-selecionado">
+			<img class="personagem-grande" src="./src/imagens/card-ciclope.png"
+			alt="Personagem Selecionado">
+			
+			<div class="informacoes-personagem">
+			<h2 class="nome-personagem" id="nome-personagem">Ciclope</h2>
+			<p class="descricao-personagem" id="descricao-personagem">Ciclope Pode disparar poderosas rajadas oculares,
+			esse poder foi adiquirido apos um grave acidente quando ele era apenas uma criança.<br><b><u>Dificuldade: Dificil</b></u> </p>
+			
+			</div>
+		</section> <!-- os personagens -->
+	</main>
+	<!-- source e src fonte onde foi buscar e alt texto alternativo caso imagem nao carregue -->
+	<script src="./src/js/index.js"></script> <!-- link do javascript -->
+</body>
+</html>
